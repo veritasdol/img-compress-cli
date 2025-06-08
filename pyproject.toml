@@ -1,0 +1,20 @@
+[project]
+name = "img-compress"
+version = "1.0.0"
+description = "A CLI tool to compress JPG and PNG images with adjustable quality."
+authors = [{ name = "Serhii Dolhopolov" }]
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1",
+    "pillow>=11.2.1",
+]
+
+[project.scripts]
+img-compress = "img_compress.main:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
